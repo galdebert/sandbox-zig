@@ -4,8 +4,6 @@
 
 ## EOL 
 
-
-
 `zig fmt` forces `\n` (and not `\r\n`) on all platforms.
 
 in `.vscode/settings.json`
@@ -21,10 +19,12 @@ in `.gitattributes`
 
 see https://github.com/ziglang/zig/blob/master/.gitattributes
 
+# format
+
+`zig fmt **/*.zig`
 
 
-# build and run
-
+# build, run, test
 
 `zig build run` builds and runs `main.zig`
 
@@ -32,7 +32,8 @@ see https://github.com/ziglang/zig/blob/master/.gitattributes
 
 so I use `zig test --cache-dir zig-cache src/structs.zig`
 
-# How o run all tests
+
+## run all tests
 
 https://github.com/ziglang/zig/issues/8234
 
