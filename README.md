@@ -2,8 +2,18 @@
 
 # setup
 
-`zig fmt` forces `\n` (and not `\r\n`) on all platforms. So we need to indiceate this in the repo `.gitattributes` to override the gitconfig.
+## EOL 
 
+
+
+`zig fmt` forces `\n` (and not `\r\n`) on all platforms.
+
+in `.vscode/settings.json`
+```
+"files.eol": "\n"
+```
+
+in `.gitattributes`
 ```
 *.zig text eol=lf
 *.txt text eol=lf
