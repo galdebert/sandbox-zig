@@ -1,6 +1,5 @@
 const std = @import("std");
 
-
 test "test root" {
     // https://github.com/ziglang/zig/issues/8234
     // but I don't see how this help ...
@@ -10,5 +9,3 @@ test "test root" {
     _ = @import("./arrays.zig");
     _ = @import("./code_examples/zigg_zagg.zig");
 }
-
-

@@ -13,15 +13,14 @@ const Point2 = packed struct {
     y: f32,
 };
 
-
 // Declare an instance of a struct.
-const p = Point {
+const p = Point{
     .x = 0.12,
     .y = 0.34,
 };
 
 // Maybe we're not ready to fill out some of the fields.
-var p2 = Point {
+var p2 = Point{
     .x = 0.12,
     .y = undefined,
 };
@@ -35,7 +34,7 @@ const Vec3 = struct {
     z: f32,
 
     pub fn init(x: f32, y: f32, z: f32) Vec3 {
-        return Vec3 {
+        return Vec3{
             .x = x,
             .y = y,
             .z = z,
@@ -69,7 +68,7 @@ test "struct namespaced variable" {
     try expect(@sizeOf(Empty) == 0);
 
     // you can still instantiate an empty struct
-    const does_nothing = Empty {};
+    const does_nothing = Empty{};
 
     _ = does_nothing;
 }
@@ -81,7 +80,7 @@ fn setYBasedOnX(x: *f32, y: f32) void {
     point.y = y;
 }
 test "field parent pointer" {
-    var point = Point {
+    var point = Point{
         .x = 0.1234,
         .y = 0.5678,
     };
@@ -100,8 +99,8 @@ fn LinkedList(comptime T: type) type {
         };
 
         first: ?*Node,
-        last:  ?*Node,
-        len:   usize,
+        last: ?*Node,
+        len: usize,
     };
 }
 
@@ -110,7 +109,7 @@ test "linked list" {
     // do this:
     try expect(LinkedList(i32) == LinkedList(i32));
 
-    var list = LinkedList(i32) {
+    var list = LinkedList(i32){
         .first = null,
         .last = null,
         .len = 0,
@@ -122,12 +121,12 @@ test "linked list" {
     const ListOfInts = LinkedList(i32);
     try expect(ListOfInts == LinkedList(i32));
 
-    var node = ListOfInts.Node {
+    var node = ListOfInts.Node{
         .prev = null,
         .next = null,
         .data = 1234,
     };
-    var list2 = LinkedList(i32) {
+    var list2 = LinkedList(i32){
         .first = &node,
         .last = &node,
         .len = 1,

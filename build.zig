@@ -40,5 +40,4 @@ pub fn build(builder: *std.build.Builder) void {
 
     const test_step2 = builder.step("test2", "Run unit tests2");
     test_step2.dependOn(&exe_tests2.step);
-
 }

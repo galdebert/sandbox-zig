@@ -2,7 +2,7 @@ const std = @import("std");
 const expect = std.testing.expect;
 
 test "fully anonymous list literal" {
-    try dump(.{ @as(u32, 1234), @as(f64, 12.34), true, "hi"});
+    try dump(.{ @as(u32, 1234), @as(f64, 12.34), true, "hi" });
 }
 
 fn dump(args: anytype) !void {
