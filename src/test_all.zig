@@ -1,11 +1,18 @@
 const std = @import("std");
+//const _ = @import("./arrays"); // solution 1
 
 test "test all" {
-    // https://github.com/ziglang/zig/issues/8234
-    // but I don't see how this help ...
-    //std.testing.refAllDecls(@This());
+    // std.testing.refAllDecls(@This()) works along with const _ = @import("./arrays"); 
+    //std.testing.refAllDecls(@This()); // solution 1
 
-    // Note _ = @import("./arrays"); does NOT work at file scope
-    _ = @import("./arrays.zig");
-    _ = @import("./code_examples/zigg_zagg.zig");
+    // Note
+
+    //_ = @import("./code_examples/arrays.zig");
+    //_ = @import("./code_examples/default_field_valuesn.zig");
+    //_ = @import("./code_examples/infer_list_literal.zig");
+    //_ = @import("./code_examples/structs.zig");
+    //_ = @import("./code_examples/zigg_zagg.zig");
+    //_ = @import("./code_examples/memory_leak_detection.zig");
+
+    _ = @import("./my_own/MyStruct.zig");
 }

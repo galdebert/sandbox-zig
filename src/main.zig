@@ -1,4 +1,6 @@
 const std = @import("std");
+const _ = @import("./my_own/MyStruct.zig");
+
 
 pub fn main() !void {
     const stdout = std.io.getStdOut().writer();
@@ -9,10 +11,8 @@ pub fn main() !void {
     std.debug.print("All your codebase are belong to us.", .{});
 }
 
-// pub fn main() anyerror!void {
-//     std.log.info("All your codebase are belong to us.", .{});
-// }
-
 test "basic test" {
+    std.testing.refAllDecls(@This());
+    
     try std.testing.expectEqual(10, 3 + 7);
 }
