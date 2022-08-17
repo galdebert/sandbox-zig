@@ -2,16 +2,18 @@
 
 # setup
 
-## EOL 
+## EOL
 
 `zig fmt` forces `\n` (and not `\r\n`) on all platforms.
 
 in `.vscode/settings.json`
+
 ```
 "files.eol": "\n"
 ```
 
 in `.gitattributes`
+
 ```
 *.zig text eol=lf
 *.txt text eol=lf
@@ -23,7 +25,6 @@ see https://github.com/ziglang/zig/blob/master/.gitattributes
 
 `zig fmt **/*.zig`
 
-
 # build, run, test
 
 `zig build run` builds and runs `main.zig`
@@ -32,23 +33,9 @@ see https://github.com/ziglang/zig/blob/master/.gitattributes
 
 so I use `zig test --cache-dir zig-cache src/structs.zig`
 
-
 ## run all tests
 
-https://github.com/ziglang/zig/issues/8234
-
-```ts
-test {
-    _ = @import("src/test_file_1.zig");
-    // ...
-    _ = @import("src/test_file_N.zig");
-}
-```
-
-or
-
-you can do `std.testing.refAllDecls(@This());` to reference all constants (basically all imported files).
-
+`zig build test_all`
 
 # learn resources
 

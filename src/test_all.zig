@@ -1,6 +1,6 @@
 const std = @import("std");
 
-test "test root" {
+test "test all" {
     // https://github.com/ziglang/zig/issues/8234
     // but I don't see how this help ...
     //std.testing.refAllDecls(@This());

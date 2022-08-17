@@ -1,5 +1,6 @@
 {
   "editor.guides.indentation": true,
   "editor.tabSize": 4,
-  "files.eol": "\n"
+  "files.eol": "\n",
+  "editor.formatOnSave": true
 }
