@@ -2,7 +2,7 @@ const std = @import("std");
 //const _ = @import("./arrays"); // solution 1
 
 test "test all" {
-    // std.testing.refAllDecls(@This()) works along with const _ = @import("./arrays"); 
+    // std.testing.refAllDecls(@This()) works along with const _ = @import("./arrays");
     //std.testing.refAllDecls(@This()); // solution 1
 
     // Note

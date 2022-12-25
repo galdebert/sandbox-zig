@@ -1,7 +1,6 @@
 const std = @import("std");
 const _ = @import("./my_own/MyStruct.zig");
 
-
 pub fn main() !void {
     const stdout = std.io.getStdOut().writer();
     try stdout.print("{s}, {s}!\n", .{ "Hello", "world" });
@@ -13,6 +12,6 @@ pub fn main() !void {
 
 test "basic test" {
     std.testing.refAllDecls(@This());
-    
+
     try std.testing.expectEqual(10, 3 + 7);
 }
